@@ -12,7 +12,7 @@ export class ChatService {
 
   constructor() {
 
-    this.socket = io('https://blooming-coast-37871.herokuapp.com/');
+    this.socket = io('https://chat-app-37871.herokuapp.com/');
 
     this.socket?.on('chat message', (msg: string) => {
       this.getMessages.next(msg); // send the new message
